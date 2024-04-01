@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  height: 1000vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  color: #fff;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #000000 84px
+    ),
+    repeating-linear-gradient(#31005e, #31005e);
+  background-color: #000000;
+  backdrop-filter: blur(30px);
+  overflow-y: hidden;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.game-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #222;
+  border: 1px solid #555;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #444;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.board {
+  border: 2px solid #9e9e9e;
+  float: left;
+}
+
+.countdown {
+  display: inline-block;
+}
+
+.settings-label {
+  margin-left: 20px;
+}
+
+.timer {
+  position: absolute;
+  top: 550px;
+}
+
+button {
+  margin: 3px;
+}
+
+.input {
+  padding: 5px;
+  background-color: #c79eed;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.input:hover {
+  background-color: #280323;
+  color: #c4b6d0;
+  transition: all 0.5s ease;
+}
+
+.boardLen {
+  margin-left: 70px;
+}
+
+.NewGame {
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #31005e;
+}
+
+.NewGame:hover {
+  color: #fff;
+  background-color: #563377;
+  scale: 1.05;
+  transition: 0.3s ease;
+}
+
+.UndoBtn {
+  padding: 10px;
+  margin-top: 75px;
+  position: relative;
+  right: 215px;
+  height: 40px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #31005e;
+}
+
+.UndoBtn:hover {
+  color: #fff;
+  background-color: #663197;
+  scale: 1.05;
+  transition: 0.3s ease;
+}
+
+h1 {
+  font-family: "Rubik Scribble", system-ui;
+  font-size: 50px;
+}
+
+.ClockBtn {
+  position: absolute;
+  left: 150px;
+  top: 560px;
+  z-index: 999;
+}
+
+#imp {
+  display: flex;
+  gap: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .game-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .board {
+    margin-top: 0;
+  }
+
+  .settings-label {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .square {
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+  }
+
+  .boardLen {
+    margin-left: 80px;
+  }
+
+  .UndoBtn {
+    right: 1px;
+    top: -50px;
+    height: 40px;
+  }
+  body {
+    backdrop-filter: blur(10px);
+  }
+
+  h1 {
+    margin-top: 20px;
+    margin-left: 3px;
+    font-size: 32px;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
