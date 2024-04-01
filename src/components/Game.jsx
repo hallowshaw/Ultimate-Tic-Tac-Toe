@@ -6,7 +6,7 @@ import generateGridNxN from "../util/GameUtil";
 const Game = (props) => {
   const rules = () => {
     window.location.href =
-      "https://www.thegamegal.com/2018/09/01/ultimate-tic-tac-toe/";
+      "https://github.com/hallowshaw/Ultimate-Tic-Tac-Toe/blob/main/Rules.md";
   };
   const [state, setState] = useState({
     history: [
